@@ -1,0 +1,17 @@
+#cloudwatch event rule lambda autotags. to be passed to the pattern level
+{
+  "detail-type": [
+    "AWS API Call via CloudTrail"
+  ],
+  "detail": {
+    "eventSource": [
+      "ec2.amazonaws.com",
+      "rds.amazonaws.com"
+    ],
+    "eventName": [
+      "RunInstances",
+      "CreateVolume",
+      "CreateDBInstance"
+    ]
+  }
+}
